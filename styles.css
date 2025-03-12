@@ -1,0 +1,120 @@
+body {
+     font-family: 'Figtree', sans-serif;
+     background-color: hsl(47, 88%, 63%);
+     margin: 0;
+ }
+
+ .card-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+ }
+ .card {
+     background-color: white;
+     padding: 20px;
+     border: 1px solid black;
+     border-radius: 10px;
+     box-shadow: 10px 10px black;
+     width: 90%; /* Adjusted for responsiveness */
+     max-width: 350px; /* Prevents the card from being too wide */
+     height: auto; /* Allows flexible height */
+     
+ }
+ .card-image {
+     width: 100%;
+     aspect-ratio: 16 / 9; /* Maintains aspect ratio */
+     object-fit: cover;
+     border-radius: 5px 5px 0 0; /* Rounded corners only at the top */
+     margin-bottom: 10px;
+ }
+ 
+ .card-content {
+     padding: 5px;
+ }
+ .btn {
+   background-color: hsl(47, 88%, 63%);
+   color: hsl(0, 0%, 7%);
+   font-weight: bold;
+   padding: 7px  10px;
+   margin-bottom: 10px;
+   border-radius: 5px;
+   border: none;
+   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+ }
+ button:hover {
+     transform: scale(1.1); /* Scales the button slightly */
+     background-color: #aaa; /* Changes background color on hover */
+     color: white; /* Changes text color */
+     cursor: pointer;
+ }
+ button:focus {
+     outline: none; /* Removes default outline */
+     box-shadow: 0 0 0 3px lightskyblue; /* Feedback for keyboard users */
+     cursor: pointer;
+ }
+ .publish-date {
+     display: block;
+     font-size: 13px;
+ }
+
+ .title{
+     font-size: 20px;
+     color: hsl(47, 88%, 63%);
+     padding: 3px 0;
+ }
+ .avatar-container {
+     display: inline-flex; /* Enables horizontal alignment */
+     align-items: center;/* Centers items vertically */
+     gap: 10px; /* Adds space between the image and name */
+     padding: 5px 0;
+     transition: color 0.3s ease; /* Smooth color transition */
+     position: relative; /* For positioning overlay text */
+ }
+ .avatar-container img {
+     width: 30px; 
+     height: auto;
+     border-radius: 50%; /* Ensures circular shape */
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+.avatar-container img:hover,
+.avatar-container img:focus {
+     transform: scale(1.2); /* Scales up the avatar */
+     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+     cursor: pointer;
+}
+.avatar-container:hover .name,
+.avatar-container:hover .overlay-text {
+    opacity: 1; /* Makes overlay text visible */
+}
+.overlay-text {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: rgb(11, 11, 11);
+     font-size: 12px;
+     font-weight: bold;
+     opacity: 0; /* Hidden by default */
+     transition: opacity 0.3s ease-in-out;
+ }
+ .name {
+     font-weight: bold;
+     font-size: 12px;
+ }
+ .avatar-container:hover,
+ .avatar-container:focus{
+     color: #996c6c;
+     cursor: pointer;
+ }
+ .text-content{
+     color: hsl(0, 0%, 42%);
+     font-size: 14px;
+ }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
