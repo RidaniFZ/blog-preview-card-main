@@ -17,9 +17,10 @@ body {
   border-radius: 10px;
   box-shadow: 10px 10px black;
   width: 90%; /* Adjusted for responsiveness */
-  max-width: 350px; /* Prevents the card from being too wide */
+  max-width: 300px; /* Prevents the card from being too wide */
   height: auto; /* Allows flexible height */
 }
+
 .card-image {
   width: 100%;
   aspect-ratio: 16 / 9; /* Maintains aspect ratio */
@@ -59,8 +60,14 @@ button:focus {
 
 .title {
   font-size: 20px;
-  color: hsl(47, 88%, 63%);
+  color: hsl(0, 0%, 7%);
   padding: 3px 0;
+}
+.title:hover,
+.title:focus,
+.title:active {
+     color:hsl(47, 88%, 63%);
+     cursor: pointer;
 }
 .avatar-container {
   display: inline-flex; /* Enables horizontal alignment */
@@ -84,12 +91,13 @@ button:focus {
 .name {
   font-weight: bold;
   font-size: 12px;
+  transition: transform 0.3s ease;
 }
-.avatar-container:hover,
-.avatar-container:focus {
-  color: #996c6c;
+.name:hover {
+  transform: scale(1.2); /* Scales up the name */
   cursor: pointer;
 }
+
 .text-content {
   color: hsl(0, 0%, 42%);
   font-size: 14px;
@@ -102,14 +110,14 @@ button:focus {
   color: hsl(228, 45%, 44%);
 }
 
-/* Desktop and larger screens */
+/* Desktop and larger screens*/
 @media (min-width: 1440px) {
      .card-container {
          padding-left: 20px;
          padding-right: 20px;
      }
      .card {
-         max-width: 400px; /* Limits card width on large screens */
+         max-width: 300px; /* Limits card width on large screens */
      }
  }
  
